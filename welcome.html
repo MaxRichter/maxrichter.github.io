@@ -40,7 +40,7 @@
 
     <meta name="description" content="Welcome document">
 
-    <meta name="author" content="Craig">
+    <meta name="author" content="Max">
 
     <meta name="tags" content="welcome">
 
@@ -56,10 +56,10 @@
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-12-16 08:30:00+01:00"/>
 <meta property="article:modified_time" content=""/>
-<meta property="article:author" content="/author/craig.html">
+<meta property="article:author" content="/author/max.html">
 <meta property="article:section" content="Intro"/>
 <meta property="article:tag" content="welcome"/>
-<meta property="og:image" content="/theme/images/post-bg.jpg">
+<meta property="og:image" content="/images/home-bg.jpg">
 
 <!-- Twitter Card -->
 
@@ -73,10 +73,10 @@
   "dateModified": "",
   "author": {
     "@type": "Person",
-    "name": "Craig",
-    "url": "/author/craig.html"
+    "name": "Max",
+    "url": "/author/max.html"
   },
-  "image": "/theme/images/post-bg.jpg",
+  "image": "/images/home-bg.jpg",
   "url": "/welcome.html",
   "description": "Welcome document"
 }
@@ -103,7 +103,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="post-header" >
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
@@ -116,10 +116,11 @@
         <h1 class="post-title">Welcome to my blog!</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
-                <a href="/author/craig.html">Craig</a>
+                <a href="/author/max.html">Max</a>
             | <time datetime="So 16 Dezember 2018">So 16 Dezember 2018</time>
         </span>
         <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('/images/home-bg.jpg')">
       </div>
     </header>
 
@@ -184,5 +185,14 @@ This is a short page just to show how to put up a static page.</p>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="/theme/js/script.js"></script>
 
+<script type="text/javascript">
+    var disqus_shortname = 'https-maxrichter-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>
