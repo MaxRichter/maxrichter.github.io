@@ -1,14 +1,24 @@
-About me!
-#########
+========
+About Me
+========
 
-:title: About
+:title: About Me
 :date: 20200603
-:cover: http://attila.demo.arulraj.net/theme/images/about-bg.jpg
+:author: maxrichter
+:tags: General
+:cover: images/spacex.jpg
 
 
-Hi, I am Max and I wrote this epic collection of Interweb
-wisdom. In days of yore, much of this would have been deemed sorcery
-and I would probably have been burned at the stake.
+Hi, I am Max a Software Engineering Manager with interest in Software Architecture, code as craftsmannship
+and working in a Dev-Ops oriented environment.
+
+In this blog, I will write about topics I come across my daily work live. This can be related to Architectural design,
+POC's for latest technologies as well my view on topics as an engineering manager.
+
+Well, let's get to work! I am looking forward to your feedback.
 
 .. image:: /images/404.jpg
-    :alt: About to make the tackle, Yale Alumni Game 2017
+    :height: 400px
+    :width: 400 px
+    :align: center
+    :alt: Let's get to work!

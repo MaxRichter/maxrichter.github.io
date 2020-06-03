@@ -98,3 +98,6 @@ OMG, I did it!
 Now the exciting part is here when you get to view what you've published for everyone to see! Open your browser and enter:
 
 https://maxrichter.github.io
+
+Use master branch of attila:
+https://github.com/arulrajnet/attila/tree/master
