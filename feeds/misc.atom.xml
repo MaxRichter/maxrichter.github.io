@@ -1,5 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Max's Tech Blog - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-06-03T00:00:00+02:00</updated><entry><title>First Post on My Sweet New Blog</title><link href="/first-post-on-my-sweet-new-blog.html" rel="alternate"></link><published>2020-06-03T00:00:00+02:00</published><updated>2020-06-03T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:None,2020-06-03:/first-post-on-my-sweet-new-blog.html</id><content type="html">&lt;p&gt;This is my first post on my new blog. While not super informative it
-should convey my sense of excitement and eagerness to engage with you,
-the reader!&lt;/p&gt;
-</content><category term="misc"></category><category term="General"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max's Tech Blog - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-06-03T00:00:00+02:00</updated><entry><title>Manager Readme</title><link href="/manager-readme.html" rel="alternate"></link><published>2020-06-03T00:00:00+02:00</published><updated>2020-06-03T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:None,2020-06-03:/manager-readme.html</id><summary type="html">&lt;div class="section" id="i-m-looking-forward-to-getting-to-know-you"&gt;
+&lt;h2&gt;I'm looking forward to getting to know you!&lt;/h2&gt;
+&lt;p&gt;This document is not intended to replace or override the relationship and mutual understanding we will build as we work together.
+Its intention is to give you an idea of how I think and how I work.&lt;/p&gt;
+&lt;p&gt;It further helped me to …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="i-m-looking-forward-to-getting-to-know-you"&gt;
+&lt;h2&gt;I'm looking forward to getting to know you!&lt;/h2&gt;
+&lt;p&gt;This document is not intended to replace or override the relationship and mutual understanding we will build as we work together.
+Its intention is to give you an idea of how I think and how I work.&lt;/p&gt;
+&lt;p&gt;It further helped me to identify and refine my thoughts and values.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="my-role-as-a-tech-lead"&gt;
+&lt;h2&gt;My role as a tech lead&lt;/h2&gt;
+&lt;p&gt;I am here to make sure our team is successful, happy, and working on the things that are most important to help our customers, improve our product, and improve our business.
+More granularly:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;I am making sure, that our team knows our clients need's and how to get them served. I believe that a happy client is the basis for our client relation.&lt;/li&gt;
+&lt;li&gt;I am making sure, that we work on the right projects and have the right priorities.&lt;/li&gt;
+&lt;li&gt;I am making sure, that our product domain is being visible to the rest of the organization.&lt;/li&gt;
+&lt;li&gt;I write some code too (but looking at my latest commits, it seems to have come to an end).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="section" id="your-development"&gt;
+&lt;h3&gt;Your development&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;I am here to make sure you are both successful and happy: I want you to improve your technical skills, grow your career, enjoy your work, and believe in both our team's and our company's mission.&lt;/li&gt;
+&lt;li&gt;I am here to make sure our team is successful and pointed in the right direction. You might hear Marvin talking about latest Python developments: I am here to make sure our team is all aligned and pushing in the same direction.&lt;/li&gt;
+&lt;li&gt;You’re very good at your job. You wouldn’t be here if you weren’t. If it feels like I’m questioning you it’s because I’m either: a) Trying to gather context. Or b) Trying to be a sounding board and rubber duck.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="add-on"&gt;
+&lt;h3&gt;Add-On&lt;/h3&gt;
+&lt;p&gt;These are in approximate order of importance. If you are not successful and happy, our team is not successful (or happy). If our team is struggling, writing code will most likely not be my top priority.&lt;/p&gt;
+&lt;p&gt;Additionally: My job is &lt;strong&gt;not&lt;/strong&gt; to tell you exactly what to do and how to do it. It is also not to be the &amp;quot;official decision maker&amp;quot; for our team. &amp;quot;I am &lt;strong&gt;accountable&lt;/strong&gt; for the decisions the team makes, even if I’m not the one making them most of the time.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Let me know when you are stuck and need my help. One of my main responsibilities is ensuring that you’re set up for success. Occasionally things slip through the cracks and I won’t know I’m letting you down.&lt;/p&gt;
+&lt;p&gt;I might have thoughts on your code. In the end, you own your code and if you have a good reason for doing something, you should do it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="feedback"&gt;
+&lt;h3&gt;Feedback&lt;/h3&gt;
+&lt;p&gt;If you have feedback for me, please give it.
+It could be something you liked and would like to see more of, something you thought I could do better, something you thought I totally screwed up, or something that doesn't fit in any of these categories.
+Even if you think it might not be the case, I _do_ want to hear it.
+And if you think I don't want to hear it, I'd love to hear why you feel that way.&lt;/p&gt;
+&lt;p&gt;If you can give me this feedback in-person, I'd prefer that.
+If you're only comfortable kicking off a discussion with an email or a Slack message, I would rather you do that than not bring it up at all.&lt;/p&gt;
+&lt;p&gt;Similarly, if you have feedback for a team member, I encourage you to give it to them directly; if you're not comfortable doing so, please feel free to relay it to me to pass along.&lt;/p&gt;
+&lt;p&gt;If you want to give direct feedback but aren't sure how or aren't comfortable doing so, let me know and we can talk through it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="one-on-ones"&gt;
+&lt;h3&gt;One-on-ones&lt;/h3&gt;
+&lt;p&gt;I will put thirty minutes on your calendar each week for a one-on-one.
+If you need more time, let me know and I will adjust.
+I will probably schedule our first one-on-one for an hour just to be sure we have time to go over the team mission and other introductory things; don't feel the need to prepare for it.&lt;/p&gt;
+&lt;p&gt;One-on-ones are &lt;strong&gt;your time&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I will probably have some things to discuss with you, but this is first and foremost your opportunity to let me know how you're doing, what you need, what you wish could be different, how you feel about our team and your teammates, what your career goals are... etc.
+These are for the conversations you might not necessarily have with me when we're sitting at our desks amongst coworkers.
+If you'd like to give me a brief status update on things you're working on or that you're stuck on, that is fine with me, but those are generally better-suited to a quick chat while I'm at my desk, an &amp;#64; on a Github/Gitlab issue, a Slack message, or a separate meeting.&lt;/p&gt;
+&lt;p&gt;I encourage you to write down some things throughout the week that you want to chat about if you think that will help; it can be hard to think of or bring up things in the moment.
+If you have things you want to talk about but struggle with bringing them up, feel free to send me a vague agenda ahead of time.
+If you don't know what to talk about, say so.
+We can use that as a topic.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="performance"&gt;
+&lt;h3&gt;Performance&lt;/h3&gt;
+&lt;p&gt;I will give you feedback on how you're doing in our one-on-ones.
+If I'm worried about your performance, I will let you know.
+If you worry that I'm worried about your performance, please let me know.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="my-schedule"&gt;
+&lt;h3&gt;My schedule&lt;/h3&gt;
+&lt;p&gt;When I am working from the office, you can usually expect me to be around between 9am and 6pm.
+I am often in earlier or later than that, but with some exceptions these tend to be the hours you can count on finding me.
+I often will continue working from home in the evenings on in-office days once I get dinner going.&lt;/p&gt;
+&lt;p&gt;I usually work from home once a week, and will mark this in my Slack status.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="after-hours-communication"&gt;
+&lt;h3&gt;After-hours communication&lt;/h3&gt;
+&lt;p&gt;I will get a sense of your normal working hours as we begin working together, and I will make a strong effort not to message you outside of these hours because I know many people have Slack notifications sent to their phone.
+I will sometimes send emails outside of your working hours (especially if we're in different time zones), as emails don't tend to notify people quite as intrusively.
+You should not feel obligated to read or respond to any emails or messages you receive from me outside of your normal hours.
+If you are receiving after-hours messages from me with any frequency, please let me know — it may mean I'm misunderstanding the hours you normally work.&lt;/p&gt;
+&lt;p&gt;If for any reason I do urgently need you outside of your normal working hours, I will page you. This will happen &lt;strong&gt;extremely&lt;/strong&gt; rarely (if ever).&lt;/p&gt;
+&lt;p&gt;Similarly, if you email or Slack me outside of my working hours, I may not respond quickly.
+I do try to keep up with notifications in case there's anything urgent, but if I read a message and it's non-urgent, I may leave it until then.
+If you have something non-urgent you want to tell me and it's outside of my work hours, I don't mind if you Slack me, though I always appreciate an explicit note that it's non-urgent!
+If you need me urgently outside of work hours, paging me is the best way to get hold of me, though you can always try Slack too first.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="if-you-need-something"&gt;
+&lt;h3&gt;If you need something&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Snag me at my desk. If I have headphones on, it does _not_ mean I am &amp;quot;in the zone&amp;quot; and expect not to be interrupted. I'm probably just enjoying some music. Feel free to grab my attention, preferably by waving in my periphery or tapping my desk. If I'm about to have to run off for a meeting or are &amp;quot;in the zone&amp;quot;, I'll let you know and figure out a better time to chat.&lt;/li&gt;
+&lt;li&gt;Slack me or email me. Even if you want an in-person meeting, just message me to let me know you want to talk and I'll make time. If you would rather talk about something over email or message, that's fine too.&lt;/li&gt;
+&lt;li&gt;Throw something on my calendar. If I am scheduled for an interview or something else I can't reschedule and you invite me to a meeting, I may chat with you and reschedule.&lt;/li&gt;
+&lt;li&gt;If you see that I've blocked off the day or time block as &amp;quot;meeting-free&amp;quot;, that does not apply to you—it's more to discourage folks from scheduling non-urgent meetings that day that could be scheduled otherwise. If you need to talk, schedule over this as much as you need.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If I'm working from home, you can expect me to be as available as I would be if I was in the office.
+Although it may feel weird to schedule a brief Slack meeting when you'd normally just swing by my desk for five minutes, please do so without hesitation if you think chatting face-to-face or screen-sharing will be more useful than textual communication.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="expectations-of-you"&gt;
+&lt;h3&gt;Expectations of you&lt;/h3&gt;
+&lt;p&gt;While this document is meant to focus on how I work and what to expect from me, I will give you a hint what I expect from you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Do amazing work. This is the expectation. Let me know if there is something preventing you from accomplishing this.&lt;/li&gt;
+&lt;li&gt;Disagree with me. The best solutions comes from a healthy level of debate. We need to be able to separate our ideas from our egos. I’ll challenge your ideas with the goal of coming to the best possible solution, I hope you’ll challenge mine.&lt;/li&gt;
+&lt;li&gt;Tell me when I screw up. This is very important. I screw up and sometimes don’t notice. I need to know or I’ll likely do it again.&lt;/li&gt;
+&lt;li&gt;Communicate. One of my jobs is to provide context. Are you missing some? Let me know and I’ll fill you in or go find out.&lt;/li&gt;
+&lt;li&gt;Bring your friends. We’re growing the team and you know who you want to work with.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="my-interests"&gt;
+&lt;h3&gt;My interests&lt;/h3&gt;
+&lt;p&gt;Here are some things I love. If you ever want to strike up casual conversation and don't know what to talk about, these are good bets:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Football. Yes, I mean the real football, not what some people call &amp;quot;soccer&amp;quot;. If in any case you are a fan of the worlds best football club, Borussia Dortmund, that is a huge plus point. I am always up for a chat about latest transfer rumors, the latest Bundesliga, Champions League or Europe League games - especially combined with a cold beer.&lt;/li&gt;
+&lt;li&gt;Sports. Besides watching football, I am also very active in doing it (although some doubt so)!. I am in for everything starting from running, calisthenics and boxing. If you are interested to talk or even better do some of the activities with me, you are more than welcome.&lt;/li&gt;
+&lt;li&gt;Beer and food. As of my German roots, I can not skip a well-tasting, cold beer. Preferibly combined with some honest food. If you know a good place or want to have me join your evening, it is hard to say _no_ for me.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="General"></category></entry><entry><title>Adding Trafik Dashboard to Kubernetes Cluster</title><link href="/adding-trafik-dashboard-to-kubernetes-cluster.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-01-01T00:00:00+01:00</updated><author><name>maxrichter</name></author><id>tag:None,2019-01-01:/adding-trafik-dashboard-to-kubernetes-cluster.html</id><summary type="html">&lt;img alt="Traefik" class="align-center" src="/images/traefik/traefik.png" style="width: 200px; height: 300px;" /&gt;
+&lt;p&gt;After some break on this project, I am back with new features.
+The first blog post was also updated to the latest version of Kubernetes and Flannel.&lt;/p&gt;
+&lt;p&gt;In this short entry, I will show you how to add the
+&lt;a class="reference external" href="https://docs.traefik.io/configuration/api/"&gt;Treafik Dashboard&lt;/a&gt; to your Kubernetes cluster.&lt;/p&gt;
+&lt;div class="section" id="installation-of-the-ingress-and-service"&gt;
+&lt;h2&gt;Installation of the ingress and …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;img alt="Traefik" class="align-center" src="/images/traefik/traefik.png" style="width: 200px; height: 300px;" /&gt;
+&lt;p&gt;After some break on this project, I am back with new features.
+The first blog post was also updated to the latest version of Kubernetes and Flannel.&lt;/p&gt;
+&lt;p&gt;In this short entry, I will show you how to add the
+&lt;a class="reference external" href="https://docs.traefik.io/configuration/api/"&gt;Treafik Dashboard&lt;/a&gt; to your Kubernetes cluster.&lt;/p&gt;
+&lt;div class="section" id="installation-of-the-ingress-and-service"&gt;
+&lt;h2&gt;Installation of the ingress and service&lt;/h2&gt;
+&lt;p&gt;If you have followed my blog, you have installed Traefik as a Deployment object (&lt;cite&gt;traefik-deployment.yaml&lt;/cite&gt;).
+To install the service and ingress execute on your master node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/ui.yaml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To retrieve the Node-Port, execute on your master node and take the &lt;cite&gt;admin&lt;/cite&gt; node port:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kubectl describe svc traefik-ingress-service -n kube-system
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you execute on your master node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl http://&amp;lt;IP-MASTER-NODE&amp;gt;:&amp;lt;NODE-PORT&amp;gt;
+&amp;lt;a &lt;span class="nv"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/dashboard/&amp;quot;&lt;/span&gt;&amp;gt;Found&amp;lt;/a&amp;gt;.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;you should see the same output as I did.&lt;/p&gt;
+&lt;p&gt;You should now be able to access the dashboard outside of your cluster:&lt;/p&gt;
+&lt;img alt="Traefik Dashboard" class="align-center" src="/images/traefik/traefik_dashboard.png" /&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="Kubernetes"></category><category term="Raspberry Pi"></category></entry><entry><title>Kubernetes running on Raspberry Pi cluster</title><link href="/kubernetes-running-on-raspberry-pi-cluster.html" rel="alternate"></link><published>2018-05-10T00:00:00+02:00</published><updated>2018-05-10T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:None,2018-05-10:/kubernetes-running-on-raspberry-pi-cluster.html</id><summary type="html">&lt;img alt="Raspberry Pi Cluster" class="align-center" src="/images/traefik/raspberry-pi-cluster.png" /&gt;
+&lt;p&gt;Is not nice to have the resources to start builiding a distributed systems with only around 150€?
+Obviously this is more of an experiment than a production ready solution - but in order to get your hands dirty it is more than enough!&lt;/p&gt;
+&lt;p&gt;That is why I decided to buy all …&lt;/p&gt;</summary><content type="html">&lt;img alt="Raspberry Pi Cluster" class="align-center" src="/images/traefik/raspberry-pi-cluster.png" /&gt;
+&lt;p&gt;Is not nice to have the resources to start builiding a distributed systems with only around 150€?
+Obviously this is more of an experiment than a production ready solution - but in order to get your hands dirty it is more than enough!&lt;/p&gt;
+&lt;p&gt;That is why I decided to buy all the utilities to setup up my own Kubernetes Cluster on Raspberry Pi's (Modell 3).
+Finally I ended up with 4 of them, with one running as the master and 3 running as nodes.&lt;/p&gt;
+&lt;p&gt;This post is inspired by the &lt;a class="reference external" href="https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster"&gt;Hypriot Raspberry Kubernetes Cluster&lt;/a&gt; blogpost from the Hypriot developers.&lt;/p&gt;
+&lt;div class="section" id="flash-hypriotos-on-your-sd-cards"&gt;
+&lt;h2&gt;Flash HypriotOS on your SD cards&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;The first step is to flash HypriotOS on all your SD cards.&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;Therefore you first have to install hypriot/flash on your OS from the &lt;a class="reference external" href="https://github.com/hypriot/flash"&gt;Hypriot Flash repository&lt;/a&gt; on GitHub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Flash the SD card(s)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first simple"&gt;
+&lt;li&gt;Adapt the &lt;strong&gt;wifi-user-data.yml&lt;/strong&gt; with the correct SSID and password if you want to use wifi as well as setting the &lt;strong&gt;hostname&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Further you can adapt the &lt;strong&gt;no-uart-config.txt&lt;/strong&gt; and set &lt;strong&gt;enable_uart=0&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Then run following command to flash the SD card with hypriot:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;flash --userdata /Users/maxrichter/flash/wifi-user-data.yml --bootconf /Users/maxrichter/flash/no-uart-config.txt https://github.com/hypriot/image-builder-rpi/releases/download/v1.9.0/hypriotos-rpi-v1.9.0.img.zip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;This resulted for me in 4 machines:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ master.local
+$ node01.local
+$ node02.local
+$ node03.local
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You should be able to connect to a raspberry with: &lt;strong&gt;ssh pirate&amp;#64;master.local&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Login with username &lt;strong&gt;pirate&lt;/strong&gt;, password &lt;strong&gt;hypriot&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;This should result in:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img alt="Hypriot 1" class="last align-center" src="/images/traefik/hypriot_1.png" /&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="install-kubernetes"&gt;
+&lt;h2&gt;Install Kubernetes&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Execute the following steps on every node:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Get root privileges:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo su -
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;First, trust the kubernetes APT key and add the official APT Kubernetes repository on every node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg &lt;span class="p"&gt;|&lt;/span&gt; apt-key add -
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;deb http://apt.kubernetes.io/ kubernetes-xenial main&amp;quot;&lt;/span&gt; &amp;gt; /etc/apt/sources.list.d/kubernetes.list
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and then just install kubeadm on every node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get install -y kubeadm
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Execute the following on the master node:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;After the previous command has been finished, initialize Kubernetes on the &amp;quot;master&amp;quot; node with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get install -y kubeadm$ kubeadm init --pod-network-cidr &lt;span class="m"&gt;10&lt;/span&gt;.244.0.0/16 --apiserver-advertise-address&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;192&lt;/span&gt;.168.178.30
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It is important that you add the &lt;strong&gt;--pod-network-cidr&lt;/strong&gt; command as given here, because we will use flannel. If you are connected via WIFI instead of Ethernet, add &lt;strong&gt;--apiserver-advertise-address=&amp;lt;wifi-ip-address&amp;gt;&lt;/strong&gt; as parameter to kubeadm init in order to publish Kubernetes’ API via WiFi. Feel free to explore the other options that exist for kubeadm init.
+After Kubernetes has been initialized, the last lines of your terminal should look like this:&lt;/p&gt;
+&lt;img alt="Hypriot 2" class="align-center" src="/images/traefik/hypriot_2.png" /&gt;
+&lt;p&gt;To start using your cluster, you need to run (as a regular user) in the master node do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir -p &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.kube
+$ sudo cp -i /etc/kubernetes/admin.conf &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.kube/config
+$ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&lt;/span&gt;:&lt;span class="k"&gt;$(&lt;/span&gt;id -g&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.kube/config
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Go to every Node and enter the join command from the master:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubeadm join &lt;span class="m"&gt;192&lt;/span&gt;.168.178.31:6443 --token tkbpzm.2mlrmy3dlw8t5d3q --discovery-token-ca-cert-hash sha256:6cc738b32406b2f21292b1b0106685105391a4a3f9d5bac5f8e9d3b9193b5e62
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="4"&gt;
+&lt;li&gt;In the master node execute:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl get nodes
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which should result in (but you will not see &lt;cite&gt;ready&lt;/cite&gt; at this stage because we first need to install flannel):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="Hypriot Get Nodes" class="align-center" src="/images/traefik/get-nodes.png" /&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="flannel"&gt;
+&lt;h2&gt;flannel&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;You can check out the &lt;a class="reference external" href="https://github.com/coreos/flannel"&gt;Flannel GitHub repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Run the following command on the master node:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="Flannel" class="align-center" src="/images/traefik/flannel.png" /&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Then wait until all flannel and all other cluster-internal Pods are Running before you continue:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl get po --all-namespaces
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;That’s all for the setup of Kubernetes! Next, let’s actually spin up a service on the cluster!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="Flannel Show Namespaces" class="align-center" src="/images/traefik/show-namespaces.png" /&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="Kubernetes"></category><category term="Raspberry Pi"></category></entry></feed>

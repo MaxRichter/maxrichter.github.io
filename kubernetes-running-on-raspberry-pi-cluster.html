@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Kubernetes running on Raspberry Pi cluster</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+<link href="/kubernetes-running-on-raspberry-pi-cluster.html" rel="canonical" />
+  <!-- Feed -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Max's Tech Blog Full Atom Feed" />
+          <link href="/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Max's Tech Blog Categories Atom Feed" />
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+
+    <meta name="description" content="Is not nice to have the resources to start builiding a distributed systems with only around 150€? Obviously this is more of an...">
+
+    <meta name="author" content="maxrichter">
+
+    <meta name="tags" content="Kubernetes">
+    <meta name="tags" content="Raspberry Pi">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Max's Tech Blog"/>
+<meta property="og:title" content="Kubernetes running on Raspberry Pi cluster"/>
+<meta property="og:description" content="Is not nice to have the resources to start builiding a distributed systems with only around 150€? Obviously this is more of an..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/kubernetes-running-on-raspberry-pi-cluster.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-05-10 00:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/maxrichter.html">
+<meta property="article:section" content="misc"/>
+<meta property="article:tag" content="Kubernetes"/>
+<meta property="article:tag" content="Raspberry Pi"/>
+<meta property="og:image" content="/images/spacex.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Kubernetes running on Raspberry Pi cluster",
+  "headline": "Kubernetes running on Raspberry Pi cluster",
+  "datePublished": "2018-05-10 00:00:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "maxrichter",
+    "url": "/author/maxrichter.html"
+  },
+  "image": "/images/spacex.jpg",
+  "url": "/kubernetes-running-on-raspberry-pi-cluster.html",
+  "description": "Is not nice to have the resources to start builiding a distributed systems with only around 150€? Obviously this is more of an..."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="/pages/about-me.html">About Me</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Kubernetes running on Raspberry Pi cluster</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/maxrichter.html">Max Richter</a>
+            | <time datetime="Do 10 Mai 2018">Do 10 Mai 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('/images/spacex.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <img alt="Raspberry Pi Cluster" class="align-center" src="/images/traefik/raspberry-pi-cluster.png" />
+<p>Is not nice to have the resources to start builiding a distributed systems with only around 150€?
+Obviously this is more of an experiment than a production ready solution - but in order to get your hands dirty it is more than enough!</p>
+<p>That is why I decided to buy all the utilities to setup up my own Kubernetes Cluster on Raspberry Pi's (Modell 3).
+Finally I ended up with 4 of them, with one running as the master and 3 running as nodes.</p>
+<p>This post is inspired by the <a class="reference external" href="https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster">Hypriot Raspberry Kubernetes Cluster</a> blogpost from the Hypriot developers.</p>
+<div class="section" id="flash-hypriotos-on-your-sd-cards">
+<h2>Flash HypriotOS on your SD cards</h2>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>The first step is to flash HypriotOS on all your SD cards.</dt>
+<dd><ul class="first last simple">
+<li>Therefore you first have to install hypriot/flash on your OS from the <a class="reference external" href="https://github.com/hypriot/flash">Hypriot Flash repository</a> on GitHub.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Flash the SD card(s)</dt>
+<dd><ul class="first simple">
+<li>Adapt the <strong>wifi-user-data.yml</strong> with the correct SSID and password if you want to use wifi as well as setting the <strong>hostname</strong></li>
+<li>Further you can adapt the <strong>no-uart-config.txt</strong> and set <strong>enable_uart=0</strong>.</li>
+<li>Then run following command to flash the SD card with hypriot:</li>
+</ul>
+<div class="highlight"><pre><span></span>flash --userdata /Users/maxrichter/flash/wifi-user-data.yml --bootconf /Users/maxrichter/flash/no-uart-config.txt https://github.com/hypriot/image-builder-rpi/releases/download/v1.9.0/hypriotos-rpi-v1.9.0.img.zip
+</pre></div>
+<ul class="simple">
+<li>This resulted for me in 4 machines:</li>
+</ul>
+<div class="highlight"><pre><span></span>$ master.local
+$ node01.local
+$ node02.local
+$ node03.local
+</pre></div>
+<ul class="simple">
+<li>You should be able to connect to a raspberry with: <strong>ssh pirate&#64;master.local</strong></li>
+<li>Login with username <strong>pirate</strong>, password <strong>hypriot</strong></li>
+<li>This should result in:</li>
+</ul>
+<img alt="Hypriot 1" class="last align-center" src="/images/traefik/hypriot_1.png" />
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="install-kubernetes">
+<h2>Install Kubernetes</h2>
+<ol class="arabic">
+<li><p class="first">Execute the following steps on every node:</p>
+<blockquote>
+<p>Get root privileges:</p>
+<div class="highlight"><pre><span></span>$ sudo su -
+</pre></div>
+<p>First, trust the kubernetes APT key and add the official APT Kubernetes repository on every node:</p>
+<div class="highlight"><pre><span></span>$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> apt-key add -
+$ <span class="nb">echo</span> <span class="s2">&quot;deb http://apt.kubernetes.io/ kubernetes-xenial main&quot;</span> &gt; /etc/apt/sources.list.d/kubernetes.list
+</pre></div>
+<p>and then just install kubeadm on every node:</p>
+<div class="highlight"><pre><span></span>$ apt-get update <span class="o">&amp;&amp;</span> apt-get install -y kubeadm
+</pre></div>
+</blockquote>
+</li>
+<li><p class="first">Execute the following on the master node:</p>
+<blockquote>
+<p>After the previous command has been finished, initialize Kubernetes on the &quot;master&quot; node with:</p>
+<div class="highlight"><pre><span></span>$ apt-get update <span class="o">&amp;&amp;</span> apt-get install -y kubeadm$ kubeadm init --pod-network-cidr <span class="m">10</span>.244.0.0/16 --apiserver-advertise-address<span class="o">=</span><span class="m">192</span>.168.178.30
+</pre></div>
+<p>It is important that you add the <strong>--pod-network-cidr</strong> command as given here, because we will use flannel. If you are connected via WIFI instead of Ethernet, add <strong>--apiserver-advertise-address=&lt;wifi-ip-address&gt;</strong> as parameter to kubeadm init in order to publish Kubernetes’ API via WiFi. Feel free to explore the other options that exist for kubeadm init.
+After Kubernetes has been initialized, the last lines of your terminal should look like this:</p>
+<img alt="Hypriot 2" class="align-center" src="/images/traefik/hypriot_2.png" />
+<p>To start using your cluster, you need to run (as a regular user) in the master node do:</p>
+<div class="highlight"><pre><span></span>$ mkdir -p <span class="nv">$HOME</span>/.kube
+$ sudo cp -i /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
+$ sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config
+</pre></div>
+</blockquote>
+</li>
+<li><p class="first">Go to every Node and enter the join command from the master:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span>$ kubeadm join <span class="m">192</span>.168.178.31:6443 --token tkbpzm.2mlrmy3dlw8t5d3q --discovery-token-ca-cert-hash sha256:6cc738b32406b2f21292b1b0106685105391a4a3f9d5bac5f8e9d3b9193b5e62
+</pre></div>
+<ol class="arabic simple" start="4">
+<li>In the master node execute:</li>
+</ol>
+<div class="highlight"><pre><span></span>$ kubectl get nodes
+</pre></div>
+<p>Which should result in (but you will not see <cite>ready</cite> at this stage because we first need to install flannel):</p>
+<blockquote>
+<img alt="Hypriot Get Nodes" class="align-center" src="/images/traefik/get-nodes.png" />
+</blockquote>
+</div>
+<div class="section" id="flannel">
+<h2>flannel</h2>
+<ol class="arabic">
+<li><p class="first">You can check out the <a class="reference external" href="https://github.com/coreos/flannel">Flannel GitHub repository</a>.</p>
+</li>
+<li><p class="first">Run the following command on the master node:</p>
+<blockquote>
+<div class="highlight"><pre><span></span>$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+</pre></div>
+<img alt="Flannel" class="align-center" src="/images/traefik/flannel.png" />
+</blockquote>
+</li>
+<li><p class="first">Then wait until all flannel and all other cluster-internal Pods are Running before you continue:</p>
+<blockquote>
+<div class="highlight"><pre><span></span>$ kubectl get po --all-namespaces
+</pre></div>
+</blockquote>
+</li>
+<li><p class="first">That’s all for the setup of Kubernetes! Next, let’s actually spin up a service on the cluster!</p>
+<blockquote>
+<img alt="Flannel Show Namespaces" class="align-center" src="/images/traefik/show-namespaces.png" />
+</blockquote>
+</li>
+</ol>
+</div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Kubernetes running on Raspberry Pi cluster&amp;url=/kubernetes-running-on-raspberry-pi-cluster.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/kubernetes-running-on-raspberry-pi-cluster.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/kubernetes-running-on-raspberry-pi-cluster.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="/tag/kubernetes.html">Kubernetes</a><a href="/tag/raspberry-pi.html">Raspberry Pi</a>                </aside>
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="/images/avatar_new.png" alt="Max Richter" />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="/author/maxrichter.html">Max Richter</a></h4>
+                            <p class="post-author-about">Data, data everywhere! Software Engineering Manager with interest in Data Engineering and Science.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Germany</span>
+                            <span class="post-author-website"><a href="https://maxrichter.github.io/"><i class="ic ic-link"></i> Website</a></span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/MaxRichter"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-linkedin"><a target="_blank" href="https://www.linkedin.com/in/max-richter-59b62b134/"><i class="ic ic-link"></i> LinkedIn</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'https-maxrichter-github-io-1';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
