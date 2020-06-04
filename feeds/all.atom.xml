@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Max's Tech Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-03T00:00:00+02:00</updated><entry><title>Manager Readme</title><link href="/manager-readme.html" rel="alternate"></link><published>2020-06-03T00:00:00+02:00</published><updated>2020-06-03T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:None,2020-06-03:/manager-readme.html</id><summary type="html">&lt;div class="section" id="i-m-looking-forward-to-getting-to-know-you"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max's Tech Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-08-19T00:00:00+02:00</updated><entry><title>Manager Readme</title><link href="/manager-readme.html" rel="alternate"></link><published>2019-08-19T00:00:00+02:00</published><updated>2019-08-19T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:None,2019-08-19:/manager-readme.html</id><summary type="html">&lt;div class="section" id="i-m-looking-forward-to-getting-to-know-you"&gt;
 &lt;h2&gt;I'm looking forward to getting to know you!&lt;/h2&gt;
 &lt;p&gt;This document is not intended to replace or override the relationship and mutual understanding we will build as we work together.
 Its intention is to give you an idea of how I think and how I work.&lt;/p&gt;
@@ -263,5 +263,205 @@ $ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&l
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="test-your-setup-with-a-tiny-service"&gt;
+&lt;h2&gt;Test your setup with a tiny service&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Let’s start a simple service so see if the cluster actually can publish a service:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl run hypriot --image&lt;span class="o"&gt;=&lt;/span&gt;hypriot/rpi-busybox-httpd --replicas&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt; --port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;80&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This command starts set of containers called hypriot from the image &lt;cite&gt;hypriot/rpi-busybox-httpd&lt;/cite&gt; and defines the port the container listens on at &lt;cite&gt;80&lt;/cite&gt;. The service will be replicated with 3 containers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Next, expose the Pods in the above created Deployment in a Service with a stable name and IP:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kubectl expose deployment hypriot --port &lt;span class="m"&gt;80&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Great! Now, let’s check if all three desired containers are up and running:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl get endpoints hypriot
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="Show Endpoints" class="align-center" src="/images/traefik/show-endpoints.png" /&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Let’s curl one of them to see if the service is up:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ curl &lt;span class="m"&gt;10&lt;/span&gt;.244.1.2
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="Curl Service" class="align-center" src="/images/traefik/curl-service.png" /&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The HTML is the response of the service. Good, it’s up and running! Next, let’s see how we can access it from outside the cluster!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="finally-access-your-service-from-outside-the-cluster"&gt;
+&lt;h2&gt;Finally access your service from outside the cluster&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;We will now deploy an example Ingress Controller to manage incoming requests from the outside world onto our tiny service. Also, in this example we we’ll use Traefik as load balancer. Read the following notes if you wanna know more about Ingress and Traefik.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;In contrast to Docker Swarm, Kubernetes itself does not provide an option to define a specific port that you can use to access a service. According to Lucas this is an important design decision; routing of incoming requests should be handled by a third party, such as a load balancer or a webserver, but not by the core product. The core Kubernetes should be lean and extensible, and encourage others to build tools on top of it for their specific needs.&lt;/li&gt;
+&lt;li&gt;Regarding load balancers in front of a cluster, there is the Ingress API object and some sample Ingress Controllers. Ingress is a built-in way of exposing Services to the outside world via an Ingress Controller that anyone can build. An Ingress rule defines how traffic should flow from the node the Ingress controller runs on to services inside of the cluster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Apply RBAC:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-rbac.yaml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Apply the new controller:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/traefik-deployment.yaml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Then you can use the ingress and node selector they used and it should work&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Lastly, create an Ingress object that makes Traefik load balance traffic on port 80 to the hypriot service:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &amp;gt; hypriot-ingress.yaml &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
+&lt;span class="s"&gt;apiVersion: extensions/v1beta1&lt;/span&gt;
+&lt;span class="s"&gt;kind: Ingress&lt;/span&gt;
+&lt;span class="s"&gt;metadata:&lt;/span&gt;
+&lt;span class="s"&gt;  name: hypriot&lt;/span&gt;
+&lt;span class="s"&gt;spec:&lt;/span&gt;
+&lt;span class="s"&gt;  rules:&lt;/span&gt;
+&lt;span class="s"&gt;  - http:&lt;/span&gt;
+&lt;span class="s"&gt;      paths:&lt;/span&gt;
+&lt;span class="s"&gt;      - path: /&lt;/span&gt;
+&lt;span class="s"&gt;        backend:&lt;/span&gt;
+&lt;span class="s"&gt;          serviceName: hypriot&lt;/span&gt;
+&lt;span class="s"&gt;          servicePort: 80&lt;/span&gt;
+&lt;span class="s"&gt;EOF&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Install the ingress:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl apply -f hypriot-ingress.yaml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Run this to get &amp;lt;NODEPORT&amp;gt; from the traefik-ingress-service:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl get services --namespace&lt;span class="o"&gt;=&lt;/span&gt;kube-system
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Visit the loadbalancing node’s IP address (from Raspberry Master) in your browser and you should see a nice web page:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For me this was: &lt;strong&gt;http://192.168.178.31:32556/&lt;/strong&gt;&lt;/p&gt;
+&lt;img alt="Hypriot Website" class="align-center" src="/images/traefik/hypriot-website.png" /&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;If you don’t see a website there yet, run &lt;strong&gt;$ kubectl get pods&lt;/strong&gt; and make sure all hypriot Pods are in the Running state.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tear-down-the-cluster"&gt;
+&lt;h2&gt;Tear down the cluster&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;If you wanna reset the whole cluster to the state after a fresh install, just run this on each node:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo kubeadm reset
+$ sudo etcdctl rm --recursive registry
+$ sudo rm -rf /var/lib/cni
+$ sudo rm -rf /run/flannel
+$ sudo rm -rf /etc/cni
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;In addition, it is recommended to delete some additional files &lt;a class="reference external" href="https://stackoverflow.com/questions/41359224/kubernetes-failed-to-setup-network-for-pod-after-executed-kubeadm-reset/41372829#41372829"&gt;as its mentioned here&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl delete -f hypriot-ingress.yaml
+$ kubectl delete ingress hypriot
+$ kubectl delete service hypriot
+$ kubectl delete deployment hypriot
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kubernetes-dashboard"&gt;
+&lt;h2&gt;Kubernetes Dashboard&lt;/h2&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;The dashboard is a wonderful interface to visualize the state of the cluster. Start it with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.0/src/deploy/recommended/kubernetes-dashboard-arm.yaml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Edit the kubernetes-dashboard service to use type: ClusterIP to type: NodePort, see Accessing Kubernetes Dashboard for more details.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl -n kube-system edit service kubernetes-dashboard
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The following command provides the port that the dashboard is exposed at on every node with the NodePort function of Services, which is another way to expose your Services to the outside of your cluster:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl get services --namespace&lt;span class="o"&gt;=&lt;/span&gt;kube-system
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Then you can checkout the dashboard on any node’s IP address on that port! Make sure to use https when accessing the dashboard, for example if running on port 32486 access it at:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ https://&amp;lt;node-ip&amp;gt;:32486
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Visit the load-balancers page:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;https://192.168.178.31:32486
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Log in with the created token&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/kubernetes/dashboard/wiki/Access-control"&gt;Summary for the dashboard&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;In order to use the admin account:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Create &lt;strong&gt;dashboard-admin.yaml&lt;/strong&gt; file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;$ nano dashboard-admin.yaml&lt;/strong&gt; and copy the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-dashboard
+  labels:
+    k8s-app: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: kubernetes-dashboard
+  namespace: kube-system
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Execute &lt;strong&gt;kubectl create -f dashboard-admin.yaml&lt;/strong&gt; to deploy it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Afterwards you can use Skip option on login page to access Dashboard.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img alt="Dashboard" class="align-center" src="/images/traefik/dashboard.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;These are all the step to get  Kubernetes get running on a Raspberry Pi Cluster.
+If you have any questions or suggestions, please feel free to use Disqus on this blog.&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="misc"></category><category term="Kubernetes"></category><category term="Raspberry Pi"></category></entry></feed>
