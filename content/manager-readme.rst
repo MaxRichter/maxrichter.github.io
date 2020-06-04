@@ -3,7 +3,7 @@ Hi, I'm Max
 ===========
 
 :title: Manager Readme
-:date: 20200603
+:date: 20190819
 :author: maxrichter
 :tags: General
 :cover: images/spacex.jpg

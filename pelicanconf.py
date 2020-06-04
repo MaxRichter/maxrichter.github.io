@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = "Max Richter"
-SITENAME = "Max's Tech Blog"
+SITENAME = "Deep Blue - Data, Tech & Engineering"
 SITEURL = ""
 
 PATH = "content"
@@ -43,10 +43,6 @@ THEME = "./attila/"
 # To set background image for the home page.
 # HOME_COVER = "https://casper.ghost.org/v1.0.0/images/welcome.jpg"
 HOME_COVER = "images/post-bg.jpg"
-
-
-# Comments
-DISQUS_SITENAME = "https-maxrichter-github-io-1"
 
 # Analytics
 # GOOGLE_ANALYTICS = "UA-3546274-12"
