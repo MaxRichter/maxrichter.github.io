@@ -116,13 +116,13 @@ Although it may feel weird to schedule a brief Slack meeting when you'd normally
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="General"></category></entry><entry><title>Adding Trafik Dashboard to Kubernetes Cluster</title><link href="https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-01-01T00:00:00+01:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2019-01-01:/adding-trafik-dashboard-to-kubernetes-cluster.html</id><summary type="html">&lt;img alt="Traefik" class="align-center" src="/images/traefik/traefik.png" style="width: 200px; height: 300px;" /&gt;
+</content><category term="misc"></category><category term="General"></category></entry><entry><title>Adding Trafik Dashboard to Kubernetes Cluster</title><link href="https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html" rel="alternate"></link><published>2019-01-01T00:00:00+01:00</published><updated>2019-01-01T00:00:00+01:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2019-01-01:/adding-trafik-dashboard-to-kubernetes-cluster.html</id><summary type="html">&lt;img alt="Traefik" class="align-center" src="/assets/images/traefik/traefik.png" style="width: 200px; height: 300px;" /&gt;
 &lt;p&gt;After some break on this project, I am back with new features.
 The first blog post was also updated to the latest version of Kubernetes and Flannel.&lt;/p&gt;
 &lt;p&gt;In this short entry, I will show you how to add the
 &lt;a class="reference external" href="https://docs.traefik.io/configuration/api/"&gt;Treafik Dashboard&lt;/a&gt; to your Kubernetes cluster.&lt;/p&gt;
 &lt;div class="section" id="installation-of-the-ingress-and-service"&gt;
-&lt;h2&gt;Installation of the ingress and …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;img alt="Traefik" class="align-center" src="/images/traefik/traefik.png" style="width: 200px; height: 300px;" /&gt;
+&lt;h2&gt;Installation of the ingress and …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;img alt="Traefik" class="align-center" src="/assets/images/traefik/traefik.png" style="width: 200px; height: 300px;" /&gt;
 &lt;p&gt;After some break on this project, I am back with new features.
 The first blog post was also updated to the latest version of Kubernetes and Flannel.&lt;/p&gt;
 &lt;p&gt;In this short entry, I will show you how to add the
