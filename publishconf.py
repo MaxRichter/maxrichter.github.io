@@ -23,4 +23,4 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = "https-maxrichter-github-io"
-# GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-168533447-1"

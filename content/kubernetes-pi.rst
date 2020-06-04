@@ -6,9 +6,9 @@ Kubernetes running on Raspberry Pi cluster
 :date: 20180510
 :author: maxrichter
 :tags: Kubernetes, Raspberry Pi
-:cover: images/spacex.jpg
+:cover: assets/images/spacex.jpg
 
-.. image:: /images/traefik/raspberry-pi-cluster.png
+.. image:: /assets/images/traefik/raspberry-pi-cluster.png
     :align: center
     :alt: Raspberry Pi Cluster
 
@@ -48,7 +48,7 @@ Flash HypriotOS on your SD cards
     * Login with username **pirate**, password **hypriot**
     * This should result in:
 
-    .. image:: /images/traefik/hypriot_1.png
+    .. image:: /assets/images/traefik/hypriot_1.png
         :align: center
         :alt: Hypriot 1
 
@@ -87,7 +87,7 @@ Install Kubernetes
     It is important that you add the **--pod-network-cidr** command as given here, because we will use flannel. If you are connected via WIFI instead of Ethernet, add **--apiserver-advertise-address=<wifi-ip-address>** as parameter to kubeadm init in order to publish Kubernetes’ API via WiFi. Feel free to explore the other options that exist for kubeadm init.
     After Kubernetes has been initialized, the last lines of your terminal should look like this:
 
-    .. image:: /images/traefik/hypriot_2.png
+    .. image:: /assets/images/traefik/hypriot_2.png
             :align: center
             :alt: Hypriot 2
 
@@ -113,7 +113,7 @@ Install Kubernetes
 
 Which should result in (but you will not see `ready` at this stage because we first need to install flannel):
 
-    .. image:: /images/traefik/get-nodes.png
+    .. image:: /assets/images/traefik/get-nodes.png
             :align: center
             :alt: Hypriot Get Nodes
 
@@ -127,7 +127,7 @@ flannel
 
         $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
-    .. image:: /images/traefik/flannel.png
+    .. image:: /assets/images/traefik/flannel.png
             :align: center
             :alt: Flannel
 
@@ -139,7 +139,7 @@ flannel
 
 4. That’s all for the setup of Kubernetes! Next, let’s actually spin up a service on the cluster!
 
-    .. image:: /images/traefik/show-namespaces.png
+    .. image:: /assets/images/traefik/show-namespaces.png
             :align: center
             :alt: Flannel Show Namespaces
 
@@ -166,7 +166,7 @@ Test your setup with a tiny service
 
         $ kubectl get endpoints hypriot
 
-    .. image:: /images/traefik/show-endpoints.png
+    .. image:: /assets/images/traefik/show-endpoints.png
             :align: center
             :alt: Show Endpoints
 
@@ -176,7 +176,7 @@ Test your setup with a tiny service
 
         $ curl 10.244.1.2
 
-    .. image:: /images/traefik/curl-service.png
+    .. image:: /assets/images/traefik/curl-service.png
         :align: center
         :alt: Curl Service
 
@@ -238,7 +238,7 @@ Finally access your service from outside the cluster
 
     For me this was: **http://192.168.178.31:32556/**
 
-    .. image:: /images/traefik/hypriot-website.png
+    .. image:: /assets/images/traefik/hypriot-website.png
         :align: center
         :alt: Hypriot Website
 
@@ -326,7 +326,7 @@ Kubernetes Dashboard
     3. Execute **kubectl create -f dashboard-admin.yaml** to deploy it.
     4.  Afterwards you can use Skip option on login page to access Dashboard.
 
-.. image:: /images/traefik/dashboard.png
+.. image:: /assets/images/traefik/dashboard.png
     :align: center
     :alt: Dashboard
 

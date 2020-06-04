@@ -6,7 +6,7 @@ Adding Trafik Dashboard to Kubernetes Cluster
 :date: 20190101
 :author: maxrichter
 :tags: Kubernetes, Raspberry Pi
-:cover: images/spacex.jpg
+:cover: assets/images/spacex.jpg
 
 
 .. image:: /images/traefik/traefik.png
@@ -49,6 +49,6 @@ you should see the same output as I did.
 
 You should now be able to access the dashboard outside of your cluster:
 
-.. image:: /images/traefik/traefik_dashboard.png
+.. image:: /assets/images/traefik/traefik_dashboard.png
     :align: center
     :alt: Traefik Dashboard

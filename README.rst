@@ -16,7 +16,9 @@ To-Do's
     <input type="checkbox">
 
 - Integrate Disqus comments: |check|
-- Integrate GOOGLE_ANALYTICS: |uncheck|
+- Integrate GOOGLE_ANALYTICS: |check|
+- Publish favicon.ico |check|
+- Publish robot.txt |check|
 - Publish in Linkedin: |uncheck|
 - Write new article about ACM: |uncheck|
 
@@ -114,3 +116,8 @@ __________________
 2. In **publishconfy.py** set:
     - DISQUS_SITENAME = `https-maxrichter-github-io`
     - SITEURL = https://maxrichter.github.io
+
+Google Analytics integration
+____________________________
+
+https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/

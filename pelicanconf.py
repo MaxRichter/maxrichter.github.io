@@ -35,6 +35,13 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
+STATIC_PATHS = ["assets"]
+
+EXTRA_PATH_METADATA = {
+    "assets/robots.txt": {"path": "robots.txt"},
+    "assets/favicon.ico": {"path": "favicon.ico"},
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
@@ -42,16 +49,13 @@ THEME = "./attila/"
 
 # To set background image for the home page.
 # HOME_COVER = "https://casper.ghost.org/v1.0.0/images/welcome.jpg"
-HOME_COVER = "images/post-bg.jpg"
-
-# Analytics
-# GOOGLE_ANALYTICS = "UA-3546274-12"
+HOME_COVER = "assets/images/post-bg.jpg"
 
 AUTHORS_BIO = {
     "maxrichter": {
         "name": "Max Richter",
-        "cover": "images/spacex.jpg",
-        "image": "images/avatar_new.png",
+        "cover": "assets/images/spacex.jpg",
+        "image": "assets/images/avatar_new.png",
         "website": "https://maxrichter.github.io/",
         "linkedin": "max-richter-59b62b134/",
         "github": "MaxRichter",
