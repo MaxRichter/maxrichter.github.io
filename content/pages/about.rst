@@ -6,8 +6,6 @@ About Me
 :date: 20200603
 :author: maxrichter
 :tags: General
-:cover: images/spacex.jpg
-
 
 Hi, I am Max a Software Engineering Manager with interest in Software Architecture, code as craftsmannship
 and working in a Dev-Ops oriented environment.
@@ -17,7 +15,7 @@ POC's for latest technologies as well my view on topics as an engineering manage
 
 Well, let's get to work! I am looking forward to your feedback.
 
-.. image:: /images/404.jpg
+.. image:: /assets/images/404.jpg
     :height: 400px
     :width: 400 px
     :align: center

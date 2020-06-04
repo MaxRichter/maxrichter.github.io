@@ -9,7 +9,7 @@ Adding Trafik Dashboard to Kubernetes Cluster
 :cover: assets/images/spacex.jpg
 
 
-.. image:: /images/traefik/traefik.png
+.. image:: /assets/images/traefik/traefik.png
     :align: center
     :height: 300px
     :width: 200 px
