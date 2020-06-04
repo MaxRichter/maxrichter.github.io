@@ -120,4 +120,4 @@ __________________
 Google Analytics integration
 ____________________________
 
-https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/
+For integration of Google Analytics for the blog follow `Matthewy's entry <https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/>`_
