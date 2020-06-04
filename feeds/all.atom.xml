@@ -142,12 +142,12 @@ To install the service and ingress execute on your master node:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;you should see the same output as I did.&lt;/p&gt;
 &lt;p&gt;You should now be able to access the dashboard outside of your cluster:&lt;/p&gt;
-&lt;img alt="Traefik Dashboard" class="align-center" src="/images/traefik/traefik_dashboard.png" /&gt;
+&lt;img alt="Traefik Dashboard" class="align-center" src="/assets/images/traefik/traefik_dashboard.png" /&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="Kubernetes"></category><category term="Raspberry Pi"></category></entry><entry><title>Kubernetes running on Raspberry Pi cluster</title><link href="https://maxrichter.github.io/kubernetes-running-on-raspberry-pi-cluster.html" rel="alternate"></link><published>2018-05-10T00:00:00+02:00</published><updated>2018-05-10T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2018-05-10:/kubernetes-running-on-raspberry-pi-cluster.html</id><summary type="html">&lt;img alt="Raspberry Pi Cluster" class="align-center" src="/images/traefik/raspberry-pi-cluster.png" /&gt;
+</content><category term="misc"></category><category term="Kubernetes"></category><category term="Raspberry Pi"></category></entry><entry><title>Kubernetes running on Raspberry Pi cluster</title><link href="https://maxrichter.github.io/kubernetes-running-on-raspberry-pi-cluster.html" rel="alternate"></link><published>2018-05-10T00:00:00+02:00</published><updated>2018-05-10T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2018-05-10:/kubernetes-running-on-raspberry-pi-cluster.html</id><summary type="html">&lt;img alt="Raspberry Pi Cluster" class="align-center" src="/assets/images/traefik/raspberry-pi-cluster.png" /&gt;
 &lt;p&gt;Is not nice to have the resources to start builiding a distributed systems with only around 150€?
 Obviously this is more of an experiment than a production ready solution - but in order to get your hands dirty it is more than enough!&lt;/p&gt;
-&lt;p&gt;That is why I decided to buy all …&lt;/p&gt;</summary><content type="html">&lt;img alt="Raspberry Pi Cluster" class="align-center" src="/images/traefik/raspberry-pi-cluster.png" /&gt;
+&lt;p&gt;That is why I decided to buy all …&lt;/p&gt;</summary><content type="html">&lt;img alt="Raspberry Pi Cluster" class="align-center" src="/assets/images/traefik/raspberry-pi-cluster.png" /&gt;
 &lt;p&gt;Is not nice to have the resources to start builiding a distributed systems with only around 150€?
 Obviously this is more of an experiment than a production ready solution - but in order to get your hands dirty it is more than enough!&lt;/p&gt;
 &lt;p&gt;That is why I decided to buy all the utilities to setup up my own Kubernetes Cluster on Raspberry Pi's (Modell 3).
@@ -186,7 +186,7 @@ $ node03.local
 &lt;li&gt;Login with username &lt;strong&gt;pirate&lt;/strong&gt;, password &lt;strong&gt;hypriot&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;This should result in:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img alt="Hypriot 1" class="last align-center" src="/images/traefik/hypriot_1.png" /&gt;
+&lt;img alt="Hypriot 1" class="last align-center" src="/assets/images/traefik/hypriot_1.png" /&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/li&gt;
@@ -216,7 +216,7 @@ $ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;deb 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;It is important that you add the &lt;strong&gt;--pod-network-cidr&lt;/strong&gt; command as given here, because we will use flannel. If you are connected via WIFI instead of Ethernet, add &lt;strong&gt;--apiserver-advertise-address=&amp;lt;wifi-ip-address&amp;gt;&lt;/strong&gt; as parameter to kubeadm init in order to publish Kubernetes’ API via WiFi. Feel free to explore the other options that exist for kubeadm init.
 After Kubernetes has been initialized, the last lines of your terminal should look like this:&lt;/p&gt;
-&lt;img alt="Hypriot 2" class="align-center" src="/images/traefik/hypriot_2.png" /&gt;
+&lt;img alt="Hypriot 2" class="align-center" src="/assets/images/traefik/hypriot_2.png" /&gt;
 &lt;p&gt;To start using your cluster, you need to run (as a regular user) in the master node do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir -p &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.kube/config
@@ -236,7 +236,7 @@ $ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&l
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Which should result in (but you will not see &lt;cite&gt;ready&lt;/cite&gt; at this stage because we first need to install flannel):&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;img alt="Hypriot Get Nodes" class="align-center" src="/images/traefik/get-nodes.png" /&gt;
+&lt;img alt="Hypriot Get Nodes" class="align-center" src="/assets/images/traefik/get-nodes.png" /&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="flannel"&gt;
@@ -248,7 +248,7 @@ $ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&l
 &lt;blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 &lt;/pre&gt;&lt;/div&gt;
-&lt;img alt="Flannel" class="align-center" src="/images/traefik/flannel.png" /&gt;
+&lt;img alt="Flannel" class="align-center" src="/assets/images/traefik/flannel.png" /&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;Then wait until all flannel and all other cluster-internal Pods are Running before you continue:&lt;/p&gt;
@@ -259,7 +259,7 @@ $ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&l
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;That’s all for the setup of Kubernetes! Next, let’s actually spin up a service on the cluster!&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;img alt="Flannel Show Namespaces" class="align-center" src="/images/traefik/show-namespaces.png" /&gt;
+&lt;img alt="Flannel Show Namespaces" class="align-center" src="/assets/images/traefik/show-namespaces.png" /&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -284,14 +284,14 @@ $ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&l
 &lt;blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ kubectl get endpoints hypriot
 &lt;/pre&gt;&lt;/div&gt;
-&lt;img alt="Show Endpoints" class="align-center" src="/images/traefik/show-endpoints.png" /&gt;
+&lt;img alt="Show Endpoints" class="align-center" src="/assets/images/traefik/show-endpoints.png" /&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;Let’s curl one of them to see if the service is up:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ curl &lt;span class="m"&gt;10&lt;/span&gt;.244.1.2
 &lt;/pre&gt;&lt;/div&gt;
-&lt;img alt="Curl Service" class="align-center" src="/images/traefik/curl-service.png" /&gt;
+&lt;img alt="Curl Service" class="align-center" src="/assets/images/traefik/curl-service.png" /&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;The HTML is the response of the service. Good, it’s up and running! Next, let’s see how we can access it from outside the cluster!&lt;/p&gt;
@@ -357,7 +357,7 @@ $ sudo chown &lt;span class="k"&gt;$(&lt;/span&gt;id -u&lt;span class="k"&gt;)&l
 &lt;li&gt;&lt;p class="first"&gt;Visit the loadbalancing node’s IP address (from Raspberry Master) in your browser and you should see a nice web page:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;For me this was: &lt;strong&gt;http://192.168.178.31:32556/&lt;/strong&gt;&lt;/p&gt;
-&lt;img alt="Hypriot Website" class="align-center" src="/images/traefik/hypriot-website.png" /&gt;
+&lt;img alt="Hypriot Website" class="align-center" src="/assets/images/traefik/hypriot-website.png" /&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;If you don’t see a website there yet, run &lt;strong&gt;$ kubectl get pods&lt;/strong&gt; and make sure all hypriot Pods are in the Running state.&lt;/p&gt;
@@ -457,7 +457,7 @@ subjects:
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;img alt="Dashboard" class="align-center" src="/images/traefik/dashboard.png" /&gt;
+&lt;img alt="Dashboard" class="align-center" src="/assets/images/traefik/dashboard.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="summary"&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;

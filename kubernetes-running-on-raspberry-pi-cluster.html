@@ -61,7 +61,7 @@
 <meta property="article:section" content="misc"/>
 <meta property="article:tag" content="Kubernetes"/>
 <meta property="article:tag" content="Raspberry Pi"/>
-<meta property="og:image" content="https://maxrichter.github.io/images/spacex.jpg">
+<meta property="og:image" content="https://maxrichter.github.io/assets/images/spacex.jpg">
 
 <!-- Twitter Card -->
 
@@ -78,7 +78,7 @@
     "name": "maxrichter",
     "url": "https://maxrichter.github.io/author/maxrichter.html"
   },
-  "image": "https://maxrichter.github.io/images/spacex.jpg",
+  "image": "https://maxrichter.github.io/assets/images/spacex.jpg",
   "url": "https://maxrichter.github.io/kubernetes-running-on-raspberry-pi-cluster.html",
   "description": "Is not nice to have the resources to start builiding a distributed systems with only around 150€? Obviously this is more of an..."
 }
@@ -122,7 +122,7 @@
             | <time datetime="Do 10 Mai 2018">Do 10 Mai 2018</time>
         </span>
         <!-- TODO : Modified check -->
-            <div class="post-cover cover" style="background-image: url('https://maxrichter.github.io/images/spacex.jpg')">
+            <div class="post-cover cover" style="background-image: url('https://maxrichter.github.io/assets/images/spacex.jpg')">
       </div>
     </header>
 
@@ -134,7 +134,7 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <img alt="Raspberry Pi Cluster" class="align-center" src="/images/traefik/raspberry-pi-cluster.png" />
+                <img alt="Raspberry Pi Cluster" class="align-center" src="/assets/images/traefik/raspberry-pi-cluster.png" />
 <p>Is not nice to have the resources to start builiding a distributed systems with only around 150€?
 Obviously this is more of an experiment than a production ready solution - but in order to get your hands dirty it is more than enough!</p>
 <p>That is why I decided to buy all the utilities to setup up my own Kubernetes Cluster on Raspberry Pi's (Modell 3).
@@ -173,7 +173,7 @@ $ node03.local
 <li>Login with username <strong>pirate</strong>, password <strong>hypriot</strong></li>
 <li>This should result in:</li>
 </ul>
-<img alt="Hypriot 1" class="last align-center" src="/images/traefik/hypriot_1.png" />
+<img alt="Hypriot 1" class="last align-center" src="/assets/images/traefik/hypriot_1.png" />
 </dd>
 </dl>
 </li>
@@ -203,7 +203,7 @@ $ <span class="nb">echo</span> <span class="s2">&quot;deb http://apt.kubernetes.
 </pre></div>
 <p>It is important that you add the <strong>--pod-network-cidr</strong> command as given here, because we will use flannel. If you are connected via WIFI instead of Ethernet, add <strong>--apiserver-advertise-address=&lt;wifi-ip-address&gt;</strong> as parameter to kubeadm init in order to publish Kubernetes’ API via WiFi. Feel free to explore the other options that exist for kubeadm init.
 After Kubernetes has been initialized, the last lines of your terminal should look like this:</p>
-<img alt="Hypriot 2" class="align-center" src="/images/traefik/hypriot_2.png" />
+<img alt="Hypriot 2" class="align-center" src="/assets/images/traefik/hypriot_2.png" />
 <p>To start using your cluster, you need to run (as a regular user) in the master node do:</p>
 <div class="highlight"><pre><span></span>$ mkdir -p <span class="nv">$HOME</span>/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
@@ -223,7 +223,7 @@ $ sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class=
 </pre></div>
 <p>Which should result in (but you will not see <cite>ready</cite> at this stage because we first need to install flannel):</p>
 <blockquote>
-<img alt="Hypriot Get Nodes" class="align-center" src="/images/traefik/get-nodes.png" />
+<img alt="Hypriot Get Nodes" class="align-center" src="/assets/images/traefik/get-nodes.png" />
 </blockquote>
 </div>
 <div class="section" id="flannel">
@@ -235,7 +235,7 @@ $ sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class=
 <blockquote>
 <div class="highlight"><pre><span></span>$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 </pre></div>
-<img alt="Flannel" class="align-center" src="/images/traefik/flannel.png" />
+<img alt="Flannel" class="align-center" src="/assets/images/traefik/flannel.png" />
 </blockquote>
 </li>
 <li><p class="first">Then wait until all flannel and all other cluster-internal Pods are Running before you continue:</p>
@@ -246,7 +246,7 @@ $ sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class=
 </li>
 <li><p class="first">That’s all for the setup of Kubernetes! Next, let’s actually spin up a service on the cluster!</p>
 <blockquote>
-<img alt="Flannel Show Namespaces" class="align-center" src="/images/traefik/show-namespaces.png" />
+<img alt="Flannel Show Namespaces" class="align-center" src="/assets/images/traefik/show-namespaces.png" />
 </blockquote>
 </li>
 </ol>
@@ -271,14 +271,14 @@ $ sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class=
 <blockquote>
 <div class="highlight"><pre><span></span>$ kubectl get endpoints hypriot
 </pre></div>
-<img alt="Show Endpoints" class="align-center" src="/images/traefik/show-endpoints.png" />
+<img alt="Show Endpoints" class="align-center" src="/assets/images/traefik/show-endpoints.png" />
 </blockquote>
 </li>
 <li><p class="first">Let’s curl one of them to see if the service is up:</p>
 <blockquote>
 <div class="highlight"><pre><span></span>$ curl <span class="m">10</span>.244.1.2
 </pre></div>
-<img alt="Curl Service" class="align-center" src="/images/traefik/curl-service.png" />
+<img alt="Curl Service" class="align-center" src="/assets/images/traefik/curl-service.png" />
 </blockquote>
 </li>
 <li><p class="first">The HTML is the response of the service. Good, it’s up and running! Next, let’s see how we can access it from outside the cluster!</p>
@@ -344,7 +344,7 @@ $ sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class=
 <li><p class="first">Visit the loadbalancing node’s IP address (from Raspberry Master) in your browser and you should see a nice web page:</p>
 <blockquote>
 <p>For me this was: <strong>http://192.168.178.31:32556/</strong></p>
-<img alt="Hypriot Website" class="align-center" src="/images/traefik/hypriot-website.png" />
+<img alt="Hypriot Website" class="align-center" src="/assets/images/traefik/hypriot-website.png" />
 </blockquote>
 </li>
 <li><p class="first">If you don’t see a website there yet, run <strong>$ kubectl get pods</strong> and make sure all hypriot Pods are in the Running state.</p>
@@ -444,7 +444,7 @@ subjects:
 </blockquote>
 </li>
 </ol>
-<img alt="Dashboard" class="align-center" src="/images/traefik/dashboard.png" />
+<img alt="Dashboard" class="align-center" src="/assets/images/traefik/dashboard.png" />
 </div>
 <div class="section" id="summary">
 <h2>Summary</h2>
@@ -477,7 +477,7 @@ If you have any questions or suggestions, please feel free to use Disqus on this
 
 
                         <figure class="post-author-avatar">
-                            <img src="https://maxrichter.github.io/images/avatar_new.png" alt="Max Richter" />
+                            <img src="https://maxrichter.github.io/assets/images/avatar_new.png" alt="Max Richter" />
                         </figure>
                     <div class="post-author-bio">
                         <h4 class="post-author-name"><a href="https://maxrichter.github.io/author/maxrichter.html">Max Richter</a></h4>
