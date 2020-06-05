@@ -6,7 +6,7 @@ Kubernetes running on Raspberry Pi cluster
 :date: 20180510
 :author: maxrichter
 :tags: Kubernetes, Raspberry Pi
-:cover: assets/images/spacex.jpg
+:cover: assets/images/article/astronaut.jpg
 
 .. image:: /assets/images/traefik/raspberry-pi-cluster.png
     :align: center

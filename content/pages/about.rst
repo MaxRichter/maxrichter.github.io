@@ -13,9 +13,9 @@ and working in a Dev-Ops oriented environment.
 In this blog, I will write about topics I come across my daily work live. This can be related to Architectural design,
 POC's for latest technologies as well my view on topics as an engineering manager.
 
-Well, let's get to work! I am looking forward to your feedback.
+Well, let's get to work! I am looking forward to your feedback via comments or maxrichter@acm.org.
 
-.. image:: /assets/images/404.jpg
+.. image:: /assets/images/pages/404.jpg
     :height: 400px
     :width: 400 px
     :align: center

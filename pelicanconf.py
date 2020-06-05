@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = "Max Richter"
-SITENAME = "Deep Blue - Data, Tech & Engineering"
+SITENAME = "Deep Blue - Data, Tech & Leadership"
 SITEURL = ""
 
 PATH = "content"
@@ -49,17 +49,17 @@ THEME = "./attila/"
 
 # To set background image for the home page.
 # HOME_COVER = "https://casper.ghost.org/v1.0.0/images/welcome.jpg"
-HOME_COVER = "assets/images/post-bg.jpg"
+HOME_COVER = "assets/images/home_cover.jpg"
 
 AUTHORS_BIO = {
     "maxrichter": {
         "name": "Max Richter",
-        "cover": "assets/images/spacex.jpg",
-        "image": "assets/images/avatar_new.png",
+        "cover": "assets/images/home_cover.jpg",
+        "image": "assets/images/avatar.png",
         "website": "https://maxrichter.github.io/",
         "linkedin": "max-richter-59b62b134/",
         "github": "MaxRichter",
         "location": "Germany",
-        "bio": "Data, data everywhere! Software Engineering Manager with interest in Data Engineering and Science.",
+        "bio": "Data, data everywhere! Software Engineering Manager with interest in Data- Engineering, Science and Leadership.",
     }
 }

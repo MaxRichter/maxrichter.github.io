@@ -2,7 +2,7 @@
 maxrichter.github.io
 ====================
 
-This is Max's Tech Blog regarding Software and Data Engineering.
+This is Max's Tech Blog regarding Software- and Data Engineering & Leadership.
 
 To-Do's
 -------
@@ -38,6 +38,7 @@ Setup
     6. Change the theme:
         - git clone --recursive https://github.com/getpelican/pelicanthemes
         - Use master branch of attila: https://github.com/arulrajnet/attila/tree/master
+        - Demo page: https://github.com/arulrajnet/attila-demo
         - Copy the theme into maxrichter.github.io project folder
         - Adapt pelicanconf.py:
             - Add: THEME = './attila/'

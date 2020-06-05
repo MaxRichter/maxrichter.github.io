@@ -6,7 +6,7 @@ Adding Trafik Dashboard to Kubernetes Cluster
 :date: 20190101
 :author: maxrichter
 :tags: Kubernetes, Raspberry Pi
-:cover: assets/images/spacex.jpg
+:cover: assets/images/article/astronaut.jpg
 
 
 .. image:: /assets/images/traefik/traefik.png

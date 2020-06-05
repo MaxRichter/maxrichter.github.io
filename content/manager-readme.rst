@@ -6,7 +6,7 @@ Hi, I'm Max
 :date: 20190819
 :author: maxrichter
 :tags: General
-:cover: assets/images/spacex.jpg
+:cover: assets/images/article/manager.png
 
 I'm looking forward to getting to know you!
 -------------------------------------------
