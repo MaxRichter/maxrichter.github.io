@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>Adding Trafik Dashboard to Kubernetes Cluster</title>
+  <title>Why I joined ACM</title>
 
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="origin" />
   <meta name="generator" content="Pelican" />
-<link href="https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html" rel="canonical" />
+<link href="https://maxrichter.github.io/why-i-joined-acm.html" rel="canonical" />
   <!-- Feed -->
         <link href="https://maxrichter.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Deep Blue - Data, Tech & Leadership Full Atom Feed" />
           <link href="https://maxrichter.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Deep Blue - Data, Tech & Leadership Categories Atom Feed" />
@@ -38,30 +38,28 @@
 
 
 
-    <meta name="description" content="After some break on this project, I am back with new features. The first blog post was also updated to the latest version of Kubernetes...">
+    <meta name="description" content="What is ACM? ACM, the world's largest educational and scientific computing society, delivers resources that advance computing as a...">
 
     <meta name="author" content="maxrichter">
 
-    <meta name="tags" content="Kubernetes">
-    <meta name="tags" content="Raspberry Pi">
+    <meta name="tags" content="ACM">
 
 
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Deep Blue - Data, Tech & Leadership"/>
-<meta property="og:title" content="Adding Trafik Dashboard to Kubernetes Cluster"/>
-<meta property="og:description" content="After some break on this project, I am back with new features. The first blog post was also updated to the latest version of Kubernetes..."/>
+<meta property="og:title" content="Why I joined ACM"/>
+<meta property="og:description" content="What is ACM? ACM, the world's largest educational and scientific computing society, delivers resources that advance computing as a..."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html"/>
+<meta property="og:url" content="https://maxrichter.github.io/why-i-joined-acm.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2019-01-01 00:00:00+01:00"/>
+<meta property="article:published_time" content="2020-06-05 00:00:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://maxrichter.github.io/author/maxrichter.html">
 <meta property="article:section" content="misc"/>
-<meta property="article:tag" content="Kubernetes"/>
-<meta property="article:tag" content="Raspberry Pi"/>
-<meta property="og:image" content="https://maxrichter.github.io/assets/images/article/astronaut.jpg">
+<meta property="article:tag" content="ACM"/>
+<meta property="og:image" content="https://maxrichter.github.io/assets/images/article/laptop.jpg">
 
 <!-- Twitter Card -->
 
@@ -69,18 +67,18 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "Adding Trafik Dashboard to Kubernetes Cluster",
-  "headline": "Adding Trafik Dashboard to Kubernetes Cluster",
-  "datePublished": "2019-01-01 00:00:00+01:00",
+  "name": "Why I joined ACM",
+  "headline": "Why I joined ACM",
+  "datePublished": "2020-06-05 00:00:00+02:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
     "name": "maxrichter",
     "url": "https://maxrichter.github.io/author/maxrichter.html"
   },
-  "image": "https://maxrichter.github.io/assets/images/article/astronaut.jpg",
-  "url": "https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html",
-  "description": "After some break on this project, I am back with new features. The first blog post was also updated to the latest version of Kubernetes..."
+  "image": "https://maxrichter.github.io/assets/images/article/laptop.jpg",
+  "url": "https://maxrichter.github.io/why-i-joined-acm.html",
+  "description": "What is ACM? ACM, the world's largest educational and scientific computing society, delivers resources that advance computing as a..."
 }
 </script>
 </head>
@@ -115,14 +113,14 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Adding Trafik Dashboard to Kubernetes Cluster</h1>
+        <h1 class="post-title">Why I joined ACM</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="https://maxrichter.github.io/author/maxrichter.html">Max Richter</a>
-            | <time datetime="Di 01 Januar 2019">Di 01 Januar 2019</time>
+            | <time datetime="Fr 05 Juni 2020">Fr 05 Juni 2020</time>
         </span>
         <!-- TODO : Modified check -->
-            <div class="post-cover cover" style="background-image: url('https://maxrichter.github.io/assets/images/article/astronaut.jpg')">
+            <div class="post-cover cover" style="background-image: url('https://maxrichter.github.io/assets/images/article/laptop.jpg')">
       </div>
     </header>
 
@@ -134,47 +132,73 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <img alt="Traefik" class="align-center" src="/assets/images/traefik/traefik.png" style="width: 200px; height: 300px;" />
-<p>After some break on this project, I am back with new features.
-The first blog post was also updated to the latest version of Kubernetes and Flannel.</p>
-<p>In this short entry, I will show you how to add the
-<a class="reference external" href="https://docs.traefik.io/configuration/api/">Treafik Dashboard</a> to your Kubernetes cluster.</p>
-<div class="section" id="installation-of-the-ingress-and-service">
-<h2>Installation of the ingress and service</h2>
-<p>If you have followed my blog, you have installed Traefik as a Deployment object (<cite>traefik-deployment.yaml</cite>).
-To install the service and ingress execute on your master node:</p>
-<div class="highlight"><pre><span></span>kubectl apply -f https://raw.githubusercontent.com/containous/traefik/master/examples/k8s/ui.yaml
+                <img alt="ACM Logo" class="align-center" src="/assets/images/acm/logo.jpg" />
+<div class="section" id="what-is-acm">
+<h2>What is ACM?</h2>
+<p><a class="reference external" href="https://www.acm.org/">ACM</a>, the world's largest educational and scientific computing society, delivers resources that advance computing as a science and a profession.
+ACM provides the computing field's premier Digital Library and serves its members and the computing profession with leading-edge publications, conferences, and career resources.</p>
+</div>
+<div class="section" id="code-of-ethics-and-professional-conduct">
+<h2>Code of Ethics and Professional Conduct</h2>
+<p>A very important part of signing up, is to agree to the Code of Ethics and Professional Conduct.
+In times like now, it is more than ever necessary to demonstrate equality and respect for all individuals.</p>
+<p>As an outline, you find the summary of the 4 sections:</p>
+<div class="highlight"><pre><span></span>- Section <span class="m">1</span> outlines fundamental ethical principles that form the basis <span class="k">for</span> the remainder of the Code.
+- Section <span class="m">2</span> addresses additional, more specific considerations of professional responsibility.
+- Section <span class="m">3</span> guides individuals who have a leadership role, whether in the workplace or in a volunteer professional capacity.
+- Commitment to ethical conduct is required of every ACM member, and principles involving compliance with the Code are given in Section <span class="m">4</span>.
 </pre></div>
-<p>To retrieve the Node-Port, execute on your master node and take the <cite>admin</cite> node port:</p>
-<div class="highlight"><pre><span></span>kubectl describe svc traefik-ingress-service -n kube-system
-</pre></div>
-<p>If you execute on your master node:</p>
-<div class="highlight"><pre><span></span>curl http://&lt;IP-MASTER-NODE&gt;:&lt;NODE-PORT&gt;
-&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;/dashboard/&quot;</span>&gt;Found&lt;/a&gt;.
-</pre></div>
-<p>you should see the same output as I did.</p>
-<p>You should now be able to access the dashboard outside of your cluster:</p>
-<img alt="Traefik Dashboard" class="align-center" src="/assets/images/traefik/traefik_dashboard.png" />
+<p>You find the full Code of Ethics <a class="reference external" href="https://www.acm.org/code-of-ethics">here</a>.</p>
+</div>
+<div class="section" id="benefits-of-joining">
+<h2>Benefits of joining</h2>
+<p>I asked myself the questions &quot;Why should I join?&quot;
+ACM itself lists the numerous <a class="reference external" href="https://www.acm.org/membership/membership-benefits">benefits</a> available.</p>
+<p>For myself, the top 3 highlights are:</p>
+<ol class="arabic">
+<li><p class="first">The network: According to ACM, nearly 100,000 highly dedicated student and professional peers are available for professional exchange</p>
+</li>
+<li><p class="first">Learning Center with resources for lifelong learning:</p>
+<blockquote>
+<ul class="simple">
+<li>Including online courses targeted toward essential IT skills and popular certifications like AWS or Azure</li>
+<li>Online books &amp; videos from <a class="reference external" href="https://acm.skillport.com/skillportfe/custom/login/saml/login.action">Skillsoft®</a>, online books from <a class="reference external" href="https://go.oreilly.com/acm">O'Reilly®</a>, <a class="reference external" href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.acm.org%2Fidp%2Fshibboleth&amp;appReturnURL=https%3A%2F%2Fwww.sciencedirect.com">ScienceDirect</a>, Morgan Kaufmann and Syngress</li>
+<li>Videos and webinars on hot topics, presented by today's innovators</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Access to the full <a class="reference external" href="https://dl.acm.org/">ACM Digital Library</a>, which includes over 2 million pages of text</p>
+</li>
+</ol>
+<p>Different <a class="reference external" href="https://www.acm.org/membership/membership-options">Membership Options</a> exist for Professionals ($99 per year), Students
+as well as Special Member rates.</p>
+<p>If you for example just look at the access to the O'Reilly online learning platform, you save $400 per year in comparison to purchase it <a class="reference external" href="https://www.oreilly.com/online-learning/pricing.html">directly</a>.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary</h2>
+<p>ACM offers great resources for life-ling learning at a very affordable price in the ever changing world of computer science.
+To highlight it one more time, is the agreement to the Code of Ethics and Professional Conduct.</p>
+<p>Feel free to reach out to me via <a class="reference external" href="mailto:maxrichter&#64;acm.org">maxrichter&#64;acm.org</a></p>
 </div>
 
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=Adding Trafik Dashboard to Kubernetes Cluster&amp;url=https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=Why I joined ACM&amp;url=https://maxrichter.github.io/why-i-joined-acm.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://maxrichter.github.io/why-i-joined-acm.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://maxrichter.github.io/why-i-joined-acm.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
                 </div>
 
                 <aside class="post-tags">
-<a href="https://maxrichter.github.io/tag/kubernetes.html">Kubernetes</a><a href="https://maxrichter.github.io/tag/raspberry-pi.html">Raspberry Pi</a>                </aside>
+<a href="https://maxrichter.github.io/tag/acm.html">ACM</a>                </aside>
 
                 <div class="clear"></div>
 
@@ -201,12 +225,12 @@ To install the service and ingress execute on your master node:</p>
                 <script type="text/javascript">
                     var disqus = 'https-maxrichter-github-io';
                     var disqus_shortname = 'https-maxrichter-github-io';
-                    var disqus_identifier = '/adding-trafik-dashboard-to-kubernetes-cluster.html';
-                    var disqus_url = 'https://maxrichter.github.io/adding-trafik-dashboard-to-kubernetes-cluster.html';
+                    var disqus_identifier = '/why-i-joined-acm.html';
+                    var disqus_url = 'https://maxrichter.github.io/why-i-joined-acm.html';
                 </script>
                 <noscript>Please enable JavaScript to view the comments.</noscript>
                 <section class="post-comments">
-                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/adding-trafik-dashboard-to-kubernetes-cluster.html" >Show Comments</a>
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/why-i-joined-acm.html" >Show Comments</a>
                     <div id="disqus_thread"></div>
                 </section>
 

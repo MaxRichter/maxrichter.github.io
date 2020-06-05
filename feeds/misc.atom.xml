@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Deep Blue - Data, Tech &amp; Engineering - misc</title><link href="https://maxrichter.github.io/" rel="alternate"></link><link href="https://maxrichter.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://maxrichter.github.io/</id><updated>2019-08-19T00:00:00+02:00</updated><entry><title>Manager Readme</title><link href="https://maxrichter.github.io/manager-readme.html" rel="alternate"></link><published>2019-08-19T00:00:00+02:00</published><updated>2019-08-19T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2019-08-19:/manager-readme.html</id><summary type="html">&lt;div class="section" id="i-m-looking-forward-to-getting-to-know-you"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Deep Blue - Data, Tech &amp; Leadership - misc</title><link href="https://maxrichter.github.io/" rel="alternate"></link><link href="https://maxrichter.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://maxrichter.github.io/</id><updated>2020-06-05T00:00:00+02:00</updated><entry><title>Why I joined ACM</title><link href="https://maxrichter.github.io/why-i-joined-acm.html" rel="alternate"></link><published>2020-06-05T00:00:00+02:00</published><updated>2020-06-05T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2020-06-05:/why-i-joined-acm.html</id><summary type="html">&lt;img alt="ACM Logo" class="align-center" src="/assets/images/acm/logo.jpg" /&gt;
+&lt;div class="section" id="what-is-acm"&gt;
+&lt;h2&gt;What is ACM?&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.acm.org/"&gt;ACM&lt;/a&gt;, the world's largest educational and scientific computing society, delivers resources that advance computing as a science and a profession.
+ACM provides the computing field's premier Digital Library and serves its members and the computing profession with leading-edge publications, conferences, and career resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="code-of-ethics-and-professional-conduct"&gt;
+&lt;h2&gt;Code of Ethics and …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;img alt="ACM Logo" class="align-center" src="/assets/images/acm/logo.jpg" /&gt;
+&lt;div class="section" id="what-is-acm"&gt;
+&lt;h2&gt;What is ACM?&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.acm.org/"&gt;ACM&lt;/a&gt;, the world's largest educational and scientific computing society, delivers resources that advance computing as a science and a profession.
+ACM provides the computing field's premier Digital Library and serves its members and the computing profession with leading-edge publications, conferences, and career resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="code-of-ethics-and-professional-conduct"&gt;
+&lt;h2&gt;Code of Ethics and Professional Conduct&lt;/h2&gt;
+&lt;p&gt;A very important part of signing up, is to agree to the Code of Ethics and Professional Conduct.
+In times like now, it is more than ever necessary to demonstrate equality and respect for all individuals.&lt;/p&gt;
+&lt;p&gt;As an outline, you find the summary of the 4 sections:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;- Section &lt;span class="m"&gt;1&lt;/span&gt; outlines fundamental ethical principles that form the basis &lt;span class="k"&gt;for&lt;/span&gt; the remainder of the Code.
+- Section &lt;span class="m"&gt;2&lt;/span&gt; addresses additional, more specific considerations of professional responsibility.
+- Section &lt;span class="m"&gt;3&lt;/span&gt; guides individuals who have a leadership role, whether in the workplace or in a volunteer professional capacity.
+- Commitment to ethical conduct is required of every ACM member, and principles involving compliance with the Code are given in Section &lt;span class="m"&gt;4&lt;/span&gt;.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You find the full Code of Ethics &lt;a class="reference external" href="https://www.acm.org/code-of-ethics"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="benefits-of-joining"&gt;
+&lt;h2&gt;Benefits of joining&lt;/h2&gt;
+&lt;p&gt;I asked myself the questions &amp;quot;Why should I join?&amp;quot;
+ACM itself lists the numerous &lt;a class="reference external" href="https://www.acm.org/membership/membership-benefits"&gt;benefits&lt;/a&gt; available.&lt;/p&gt;
+&lt;p&gt;For myself, the top 3 highlights are:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;The network: According to ACM, nearly 100,000 highly dedicated student and professional peers are available for professional exchange&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Learning Center with resources for lifelong learning:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Including online courses targeted toward essential IT skills and popular certifications like AWS or Azure&lt;/li&gt;
+&lt;li&gt;Online books &amp;amp; videos from &lt;a class="reference external" href="https://acm.skillport.com/skillportfe/custom/login/saml/login.action"&gt;Skillsoft®&lt;/a&gt;, online books from &lt;a class="reference external" href="https://go.oreilly.com/acm"&gt;O'Reilly®&lt;/a&gt;, &lt;a class="reference external" href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.acm.org%2Fidp%2Fshibboleth&amp;amp;appReturnURL=https%3A%2F%2Fwww.sciencedirect.com"&gt;ScienceDirect&lt;/a&gt;, Morgan Kaufmann and Syngress&lt;/li&gt;
+&lt;li&gt;Videos and webinars on hot topics, presented by today's innovators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Access to the full &lt;a class="reference external" href="https://dl.acm.org/"&gt;ACM Digital Library&lt;/a&gt;, which includes over 2 million pages of text&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Different &lt;a class="reference external" href="https://www.acm.org/membership/membership-options"&gt;Membership Options&lt;/a&gt; exist for Professionals ($99 per year), Students
+as well as Special Member rates.&lt;/p&gt;
+&lt;p&gt;If you for example just look at the access to the O'Reilly online learning platform, you save $400 per year in comparison to purchase it &lt;a class="reference external" href="https://www.oreilly.com/online-learning/pricing.html"&gt;directly&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;ACM offers great resources for life-ling learning at a very affordable price in the ever changing world of computer science.
+To highlight it one more time, is the agreement to the Code of Ethics and Professional Conduct.&lt;/p&gt;
+&lt;p&gt;Feel free to reach out to me via &lt;a class="reference external" href="mailto:maxrichter&amp;#64;acm.org"&gt;maxrichter&amp;#64;acm.org&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="misc"></category><category term="ACM"></category></entry><entry><title>Manager Readme</title><link href="https://maxrichter.github.io/manager-readme.html" rel="alternate"></link><published>2019-08-19T00:00:00+02:00</published><updated>2019-08-19T00:00:00+02:00</updated><author><name>maxrichter</name></author><id>tag:maxrichter.github.io,2019-08-19:/manager-readme.html</id><summary type="html">&lt;div class="section" id="i-m-looking-forward-to-getting-to-know-you"&gt;
 &lt;h2&gt;I'm looking forward to getting to know you!&lt;/h2&gt;
 &lt;p&gt;This document is not intended to replace or override the relationship and mutual understanding we will build as we work together.
 Its intention is to give you an idea of how I think and how I work.&lt;/p&gt;
